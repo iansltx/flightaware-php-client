@@ -27,6 +27,10 @@ $flightInfoEx = $faClient->flightInfoEx($ident, $how_many, $offset);
 $flightId = $faClient->getFlightId($ident, $departure_time);
 $historicalTrack = $faClient->getHistoricalTrack($flight_id);
 $lastTrack = $faClient->getLastTrack($ident);
+$endpoint = $faClient->registerAlertEndpoint($url,$format);
+$getAlertResults = $faClient->getAlerts()
+$newAlertID = $faClient->setAlert($alert_id, $ident, $origin, $destination, $aircrafttype, $date_start, $date_end, $channels, $enablede, $max_weekly);
+$foo = $faClient->deleteAlert($alert_id);
 ````
 
 Contributing
