@@ -6,22 +6,23 @@ This class allows for quick interaction with a (small) subset of FlightAware's F
 Requirements
 ------------
 
-1. PHP 5.3+ (tested with 5.4.24)
+1. PHP 5.5+
 2. curl
 3. A FlightAware API account
 
 Usage
 -----
 
-First, require FlightAwareClient.php. Then instantiate the client class as follows:
+First, require FlightAwareClient.php, or include this repo via Composer (its composer.json will add the require for you
+to the Composer autoloader classmap). Then instantiate the client class as follows:
 
-````
-$faClient = new FlightAwareClient('username', 'api_key');
+````php
+$faClient = new iansltx\FlightAwareClient\Client('username', 'api_key');
 ````
 
-The following methods are available; all return unwrapped result arrays...
+The following methods are available; all return unwrapped result arrays:
 
-````
+````php
 $inFlightInfo = $faClient->inFlightInfo($ident); // reformats waypoints with distinct latitude and longitude array keys
 $flightInfoEx = $faClient->flightInfoEx($ident, $how_many, $offset);
 $flightId = $faClient->getFlightId($ident, $departure_time);
@@ -36,9 +37,9 @@ $foo = $faClient->deleteAlert($alert_id);
 Contributing
 ------------
 
-Contributions/PRs are welcomed. This code is MIT licensed, but pull requests are appreciated.
+Contributions/PRs are welcomed. This code is MIT licensed.
 
 Other Notes
 -----------
 
-This library was built for use in http://limitless-horizons.org.
+This library was originally built for use in http://limitless-horizons.org.

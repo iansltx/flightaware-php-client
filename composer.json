@@ -1,0 +1,13 @@
+{
+  "name": "iansltx/flightaware-php-client",
+  "description": "A curl-based API client for FlightAware's FlightXML v2 API",
+  "homepage": "https://github.com/iansltx/flightaware-php-client",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.5.0",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "classmap": ["FlightAwareClient.php"]
+  }
+}
