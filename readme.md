@@ -10,11 +10,21 @@ Requirements
 2. curl
 3. A FlightAware API account
 
+Installation
+-----
+
+You can install this library via Composer:
+
+```php
+composer require iansltx/flightaware-php-client
+```
+
+Or download the repo and require FlightAwareClient.php.
+
 Usage
 -----
 
-First, require FlightAwareClient.php, or include this repo via Composer (its composer.json will add the require for you
-to the Composer autoloader classmap). Then instantiate the client class as follows:
+First, instantiate the client class as follows:
 
 ````php
 $faClient = new iansltx\FlightAwareClient\Client('username', 'api_key');
